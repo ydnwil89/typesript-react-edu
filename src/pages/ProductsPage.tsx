@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Product } from './components/Product'
+import { Product } from '../components/Product'
 import axios from 'axios'
-import {IProduct} from './models'
+import {IProduct} from '../models/IProduct'
 
-function App() {
+export function ProductsPage() {
   const [products, setProducts] = useState<IProduct[]>([])
 
   async function fetchProducts() {
@@ -21,5 +21,3 @@ function App() {
      </div>
   )
 }
-
-export default App
